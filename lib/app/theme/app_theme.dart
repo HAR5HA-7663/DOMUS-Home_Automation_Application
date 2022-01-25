@@ -1,7 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:home_fi/app/theme/color_theme.dart';
+import 'package:Domus/app/theme/color_theme.dart';
 
 enum AppTheme {
   MaroonLight,

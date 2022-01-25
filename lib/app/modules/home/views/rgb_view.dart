@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_circle_color_picker/flutter_circle_color_picker.dart';
 import 'package:get/get.dart';
-import 'package:home_fi/app/modules/home/controllers/home_controller.dart';
-import 'package:home_fi/app/theme/text_theme.dart';
+import 'package:Domus/app/modules/home/controllers/home_controller.dart';
+import 'package:Domus/app/theme/text_theme.dart';
 
 class RGBview extends GetView<HomeController> {
   RGBview({Key? key}) : super(key: key);

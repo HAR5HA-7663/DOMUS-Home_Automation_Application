@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 // import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:home_fi/app/data/models/adafruit_get.dart';
+import 'package:Domus/app/data/models/adafruit_get.dart';
 import 'package:http/http.dart' as http;
 
 class TempHumidAPI {

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:home_fi/app/data/models/adafruit_get.dart';
-import 'package:home_fi/app/global_widgets/room_selector.dart';
-import 'package:home_fi/app/global_widgets/smart_systems.dart';
-import 'package:home_fi/app/global_widgets/user_avathar.dart';
-import 'package:home_fi/app/modules/home/controllers/home_controller.dart';
-import 'package:home_fi/app/modules/home/views/rgb_view.dart';
-import 'package:home_fi/app/theme/color_theme.dart';
-import 'package:home_fi/app/theme/text_theme.dart';
+import 'package:Domus/app/data/models/adafruit_get.dart';
+import 'package:Domus/app/global_widgets/room_selector.dart';
+import 'package:Domus/app/global_widgets/smart_systems.dart';
+import 'package:Domus/app/global_widgets/user_avathar.dart';
+import 'package:Domus/app/modules/home/controllers/home_controller.dart';
+import 'package:Domus/app/modules/home/views/rgb_view.dart';
+import 'package:Domus/app/theme/color_theme.dart';
+import 'package:Domus/app/theme/text_theme.dart';
 
 class DashboardView extends GetView<HomeController> {
   @override

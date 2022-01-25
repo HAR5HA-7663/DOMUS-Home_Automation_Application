@@ -4,7 +4,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:home_fi/app/modules/home/views/home_view.dart';
+import 'package:Domus/app/modules/home/views/home_view.dart';
 
 class SplashScreenController extends GetxController
     with SingleGetTickerProviderMixin {

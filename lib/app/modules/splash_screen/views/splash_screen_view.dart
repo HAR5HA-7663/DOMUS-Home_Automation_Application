@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:home_fi/app/theme/text_theme.dart';
+import 'package:Domus/app/theme/text_theme.dart';
 import 'package:lottie/lottie.dart';
 
 import '../controllers/splash_screen_controller.dart';
