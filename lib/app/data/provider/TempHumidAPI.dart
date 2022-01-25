@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 
 class TempHumidAPI {
   static String username = 'HAR5HA';
-  static String? aioKey = 'aio_PSsy34BNOyw9cyC9tiBZlHG7ucyY';
+  static String? aioKey = 'aio_Xinm46dZKVCJHeiBihA7LTsPij0b';
   static String tempFeed = 'temperature';
   static String humidFeed = 'humidity';
   static String led1Feed = 'led-1';

@@ -30,7 +30,7 @@ class SplashScreenView extends GetView<SplashScreenController> {
                 height: 80.0,
               ),
               Text(
-                'Home-Fi',
+                'Domus',
                 style: HomeFiTextTheme.kHeadTextStyle.copyWith(
                   color: Theme.of(context).primaryColor,
                 ),
