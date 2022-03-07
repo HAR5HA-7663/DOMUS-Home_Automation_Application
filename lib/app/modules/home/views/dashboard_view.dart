@@ -33,7 +33,7 @@ class DashboardView extends GetView<HomeController> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Welcome\nHome, ${controller.userName}',
+                    'Welcome\n${controller.userName}',
                     style: HomeFiTextTheme.kSubHeadTextStyle
                         .copyWith(color: Theme.of(context).primaryColorDark),
                   ),
@@ -57,44 +57,44 @@ class DashboardView extends GetView<HomeController> {
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: size.height * 0.02),
-                    Text(
-                      'Rooms',
-                      style: HomeFiTextTheme.kSub2HeadTextStyle
-                          .copyWith(color: Theme.of(context).primaryColorDark),
-                    ),
-                    SizedBox(height: size.height * 0.02),
-                    GetBuilder<HomeController>(
-                      init: HomeController(),
-                      id: 1,
-                      builder: (_) {
-                        return Container(
-                          width: size.width,
-                          height: size.height * 0.12,
-                          child: Theme(
-                            data: Theme.of(context),
-                            child: ListView.builder(
-                              scrollDirection: Axis.horizontal,
-                              itemCount: controller.rooms.length,
-                              itemBuilder: (context, index) {
-                                return GestureDetector(
-                                  child: RoomSelector(
-                                    roomName: controller.rooms[index].roomName,
-                                    roomImageURL:
-                                        controller.rooms[index].roomImgUrl,
-                                    isSelected: controller.selectedRoom[index],
-                                    onTap: () {},
-                                  ),
-                                  onTap: () {
-                                    controller.roomChange(index);
-                                  },
-                                );
-                              },
-                            ),
-                          ),
-                        );
-                      },
-                    ),
+                    // SizedBox(height: size.height * 0.02),
+                    // Text(
+                    //   'Rooms',
+                    //   style: HomeFiTextTheme.kSub2HeadTextStyle
+                    //       .copyWith(color: Theme.of(context).primaryColorDark),
+                    // ),
+                    // SizedBox(height: size.height * 0.02),
+                    // GetBuilder<HomeController>(
+                    //   init: HomeController(),
+                    //   id: 1,
+                    //   builder: (_) {
+                    //     return Container(
+                    //       width: size.width,
+                    //       height: size.height * 0.12,
+                    //       child: Theme(
+                    //         data: Theme.of(context),
+                    //         child: ListView.builder(
+                    //           scrollDirection: Axis.horizontal,
+                    //           itemCount: controller.rooms.length,
+                    //           itemBuilder: (context, index) {
+                    //             return GestureDetector(
+                    //               child: RoomSelector(
+                    //                 roomName: controller.rooms[index].roomName,
+                    //                 roomImageURL:
+                    //                     controller.rooms[index].roomImgUrl,
+                    //                 isSelected: controller.selectedRoom[index],
+                    //                 onTap: () {},
+                    //               ),
+                    //               onTap: () {
+                    //                 controller.roomChange(index);
+                    //               },
+                    //             );
+                    //           },
+                    //         ),
+                    //       ),
+                    //     );
+                    //   },
+                    // ),
                     SizedBox(height: size.height * 0.03),
                     Container(
                       width: Get.width,
@@ -206,14 +206,14 @@ class DashboardView extends GetView<HomeController> {
                                 SmartSystem(
                                   color: GFTheme.lightPurple,
                                   index: 0,
-                                  title: 'LED Light',
+                                  title: 'Light 1',
                                   imageUrl: 'assets/images/icons8-light-96.png',
                                   onTap: () {},
                                 ),
                                 SmartSystem(
                                   color: GFTheme.lightBlue,
                                   index: 1,
-                                  title: 'RGB LED',
+                                  title: 'RGB light',
                                   imageUrl:
                                       'assets/images/icons8-rgb-lamp-96.png',
                                   onTap: () {
@@ -229,15 +229,14 @@ class DashboardView extends GetView<HomeController> {
                                 SmartSystem(
                                   color: GFTheme.lightYellow,
                                   index: 2,
-                                  title: 'Music Player',
-                                  imageUrl:
-                                      'assets/images/icons8-music-record-96.png',
+                                  title: 'Power Socket',
+                                  imageUrl: 'assets/images/858037_xWe_icon.ico',
                                   onTap: () {},
                                 ),
                                 SmartSystem(
                                   color: GFTheme.lightPeach,
                                   index: 3,
-                                  title: 'LED Light 2',
+                                  title: 'Light 2',
                                   imageUrl: 'assets/images/icons8-light-96.png',
                                   onTap: () {},
                                 ),

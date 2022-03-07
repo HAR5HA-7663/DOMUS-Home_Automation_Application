@@ -16,7 +16,7 @@ class HomeController extends GetxController {
   get currentIndex => this._currentIndex.value;
 
   // userData
-  String userName = 'harsha';
+  String userName = 'Harsha';
   bool isMale = true;
 
   // List of bools for selected room
@@ -82,6 +82,14 @@ class HomeController extends GetxController {
       var value = isToggled[index] ? "#ffffff" : "#000000";
       TempHumidAPI.updateRGBdata(value);
     }
+    if (index == 2) {
+      var value = isToggled[index] ? "1" : "0";
+      TempHumidAPI.updatesocketData(value);
+    }
+    if (index == 3) {
+      var value = isToggled[index] ? "1" : "0";
+      TempHumidAPI.updateLed2Data(value);
+    }
     update([2, true]);
   }
 
@@ -97,19 +105,33 @@ class HomeController extends GetxController {
   }
 
   getSmartSystemStatus() async {
-    var data = await TempHumidAPI.getLed1Data();
+    var data1 = await TempHumidAPI.getLed1Data();
+    var data2 = await TempHumidAPI.getsocketData();
+    var data3 = await TempHumidAPI.getLed2Data();
     var rgbData = await TempHumidAPI.getRGBstatus();
     currentRGB.value = rgbData.lastValue!;
-    var value = int.parse(data.lastValue!);
-    if (value == 1) {
+    var value1 = int.parse(data1.lastValue!);
+    var value2 = int.parse(data2.lastValue!);
+    var value3 = int.parse(data3.lastValue!);
+    if (value1 == 1) {
       isToggled[0] = true;
-    } else if (value == 0) {
+    } else if (value1 == 0) {
       isToggled[0] = false;
     }
     if (rgbData.lastValue?.compareTo("#000000") == 0) {
       isToggled[1] = false;
     } else {
       isToggled[1] = true;
+    }
+    if (value2 == 1) {
+      isToggled[2] = true;
+    } else if (value2 == 0) {
+      isToggled[2] = false;
+    }
+    if (value3 == 1) {
+      isToggled[3] = true;
+    } else if (value3 == 0) {
+      isToggled[3] = false;
     }
     update([2, true]);
   }
