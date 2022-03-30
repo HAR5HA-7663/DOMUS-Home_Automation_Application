@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:Domus/app/data/models/adafruit_get.dart';
-import 'package:Domus/app/global_widgets/room_selector.dart';
+// import 'package:Domus/app/global_widgets/room_selector.dart';
 import 'package:Domus/app/global_widgets/smart_systems.dart';
 import 'package:Domus/app/global_widgets/user_avathar.dart';
 import 'package:Domus/app/modules/home/controllers/home_controller.dart';

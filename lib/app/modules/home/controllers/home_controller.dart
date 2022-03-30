@@ -16,7 +16,7 @@ class HomeController extends GetxController {
   get currentIndex => this._currentIndex.value;
 
   // userData
-  String userName = 'Harsha';
+  String userName = 'Abhinav';
   bool isMale = true;
 
   // List of bools for selected room
