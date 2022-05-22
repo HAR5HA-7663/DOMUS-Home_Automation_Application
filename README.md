@@ -24,7 +24,7 @@
 **Steps of Execution:**
 1. Upload the microcontroller code with the credentials of the Wi-Fi and adafruit cloud to the microcontroller using Arduino IDE
 2. Wire the microcontroller according to the diagram below:
-![alt text](https://github.com/HAR5HA-7663/DOMUS-Home_Automation_Application/blob/main/ESP32%20Code/p1_bb.jpg?raw=true)
+![alt text](https://github.com/HAR5HA-7663/DOMUS-Home_Automation_Application/blob/main/Microcontroller_code/p1_b.jpg?raw=true)
 3. Connect the home appliances to the relay
 4. Enter your Adafruit credentials and key in the settings section of the app.
 5. Now you can control the home appliances through the app, physical switches and any devices with support Google Assistant or Alexa.
