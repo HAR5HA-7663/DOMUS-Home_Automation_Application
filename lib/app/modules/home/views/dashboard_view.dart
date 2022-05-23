@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:get_storage/get_storage.dart';
 import 'package:get/get.dart';
 import 'package:Domus/app/data/models/adafruit_get.dart';
 // import 'package:Domus/app/global_widgets/room_selector.dart';
@@ -11,6 +11,7 @@ import 'package:Domus/app/theme/color_theme.dart';
 import 'package:Domus/app/theme/text_theme.dart';
 
 class DashboardView extends GetView<HomeController> {
+  final box = GetStorage();
   @override
   Widget build(BuildContext context) {
     Size size = Get.size;
@@ -33,7 +34,7 @@ class DashboardView extends GetView<HomeController> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Welcome\n${controller.userName}',
+                    'Welcome\n${box.read('name')}',
                     style: HomeFiTextTheme.kSubHeadTextStyle
                         .copyWith(color: Theme.of(context).primaryColorDark),
                   ),
@@ -213,7 +214,7 @@ class DashboardView extends GetView<HomeController> {
                                 SmartSystem(
                                   color: GFTheme.lightBlue,
                                   index: 1,
-                                  title: 'RGB light',
+                                  title: 'light 2',
                                   imageUrl:
                                       'assets/images/icons8-rgb-lamp-96.png',
                                   onTap: () {
@@ -236,7 +237,7 @@ class DashboardView extends GetView<HomeController> {
                                 SmartSystem(
                                   color: GFTheme.lightPeach,
                                   index: 3,
-                                  title: 'Light 2',
+                                  title: 'Light 3',
                                   imageUrl: 'assets/images/icons8-light-96.png',
                                   onTap: () {},
                                 ),

@@ -1,12 +1,14 @@
 import 'dart:convert';
 
 // import 'package:flutter_dotenv/flutter_dotenv.dart';
+
+import 'package:get_storage/get_storage.dart';
 import 'package:Domus/app/data/models/adafruit_get.dart';
 import 'package:http/http.dart' as http;
 
 class TempHumidAPI {
-  static String username = 'HAR5HA';
-  static String? aioKey = 'aio_duBA06ohOw5KzLRkneRoR1YBZi7I';
+  static String username = GetStorage().read('username');
+  static String? aioKey = GetStorage().read('apikey');
   static String tempFeed = 'temperature';
   static String humidFeed = 'humidity';
   static String led1Feed = 'led-1';

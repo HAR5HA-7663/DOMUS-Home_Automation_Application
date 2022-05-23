@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
+import 'package:get_storage/get_storage.dart';
 import 'package:Domus/app/data/models/adafruit_get.dart';
 import 'package:Domus/app/data/models/room_model.dart';
 import 'package:Domus/app/data/provider/TempHumidAPI.dart';
@@ -12,11 +12,12 @@ import 'package:Domus/app/modules/home/views/settings_view.dart';
 
 class HomeController extends GetxController {
   // bottom nav current index.
+  final box = GetStorage();
   RxInt _currentIndex = 0.obs;
   get currentIndex => this._currentIndex.value;
 
   // userData
-  String userName = 'Abhinav';
+  // String userName = box.read("username");
   bool isMale = true;
 
   // List of bools for selected room

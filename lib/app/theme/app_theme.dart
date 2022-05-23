@@ -11,7 +11,7 @@ enum AppTheme {
 final appThemeData = {
   AppTheme.MaroonLight: ThemeData(
     brightness: Brightness.light,
-    primaryColor: GFTheme.primaryMaroon,
+    primaryColor: Color.fromARGB(255, 46, 19, 58),
     accentColor: GFTheme.primaryMaroon.withOpacity(0.3),
     scaffoldBackgroundColor: GFTheme.white1,
     primaryColorLight: GFTheme.secondaryMaroon,
